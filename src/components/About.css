@@ -1,0 +1,155 @@
+.about {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.about-intro h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  animation: slideFade 1s ease-in-out forwards;
+}
+
+.about-intro h2 span {
+  color: #00dfd8;
+}
+
+.about-intro p {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #c9d1d9;
+  animation: fadeIn 1s ease-in-out 0.3s forwards;
+  opacity: 0;
+}
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  animation: fadeInUp 1s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 260px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 25px rgba(0, 195, 255, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 195, 255, 0.25);
+}
+
+.about-card h3 {
+  font-size: 1.25rem;
+  color: #00dfd8;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00dfd8;
+  padding-bottom: 0.5rem;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #d1d5db;
+  text-align: left;
+}
+
+.about-card ul li {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.about-card ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #00dfd8;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-intro h2 {
+    font-size: 2.3rem;
+  }
+
+  .about-intro p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .about-card {
+    width: 220px;
+    padding: 1.3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .about-intro h2 {
+    font-size: 2rem;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.2rem;
+  }
+}

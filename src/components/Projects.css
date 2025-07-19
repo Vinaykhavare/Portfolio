@@ -1,0 +1,117 @@
+.projects {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out both;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #00c3ff;
+  margin-bottom: 3rem;
+  animation: slideIn 1s ease-in-out both;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  animation: fadeUp 1.2s ease-in-out 0.5s both;
+  opacity: 0;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 195, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 195, 255, 0.25);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #00c3ff;
+}
+
+.project-info {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  color: #00c3ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  color: #e0e6ed;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .projects h2 {
+    font-size: 2.1rem;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .projects {
+    padding: 3rem 1rem;
+  }
+
+  .projects h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .project-card img {
+    height: 140px;
+  }
+}
