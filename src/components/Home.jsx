@@ -12,7 +12,7 @@ function Home() {
         </div>
 
         <h1>Hi, I'm Vinay Khavare</h1>
-        <p>A passionate MERN Stack Developer creating modern web experiences.</p>
+        <p>"Passionate Full Stack Developer building modern, scalable web applications."</p>
 
         <a
           href={resumePDF}

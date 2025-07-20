@@ -2,9 +2,9 @@
 import React from 'react';
 import {
   FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs,
-  FaGitAlt, FaGithub, FaDatabase
+  FaGitAlt, FaGithub, FaDatabase, FaJava
 } from 'react-icons/fa';
-import { SiExpress, SiMongodb } from 'react-icons/si';
+import { SiExpress, SiMongodb,SiMysql } from 'react-icons/si';
 import './Skills.css';
 
 const skillsData = [
@@ -12,6 +12,8 @@ const skillsData = [
   { title: "CSS3", icon: <FaCss3Alt className="icon" /> },
   { title: "JavaScript", icon: <FaJsSquare className="icon" /> },
   { title: "React.js", icon: <FaReact className="icon" /> },
+   { title: "Java", icon: <FaJava className="icon" /> },
+  { title: "MySQL", icon: <SiMysql className="icon" /> },
   { title: "Node.js", icon: <FaNodeJs className="icon" /> },
   { title: "Express.js", icon: <SiExpress className="icon" /> },
   { title: "MongoDB", icon: <SiMongodb className="icon" /> },

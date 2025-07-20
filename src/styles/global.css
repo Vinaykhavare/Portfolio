@@ -1,0 +1,7 @@
+/* src/styles/global.css */
+:root {
+  --bg-secondary: #111827;       /* dark navy gray */
+  --text-primary: #f9fafb;       /* light grayish white */
+  --accent: #00adb5;             /* cyan-blue accent */
+  --highlight: #ff5722;          /* orange hover effect */
+}

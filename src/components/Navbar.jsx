@@ -11,7 +11,11 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">Vinay.dev</div>
+      <div className="logo">
+  <img src="/Vk.svg" alt="Logo" className="logo-icon" />
+  <span className="logo-text">Vinay</span>
+</div>
+
 
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
         <a href="#home" onClick={closeMenu}>Home</a>

@@ -68,3 +68,20 @@
     display: block;
   }
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+}

@@ -8,8 +8,7 @@ function About() {
       <div className="about-intro">
         <h2>About <span>Me</span></h2>
         <p>
-          I'm <strong>Vinay Khavare</strong>, a passionate Full Stack Developer (Java + MERN) who enjoys building efficient, scalable, and visually appealing web applications.
-          I love experimenting with modern technologies and aim to create user-friendly interfaces and strong backend systems.
+     <strong> I'm Vinay Khavare, a passionate Full Stack Developer</strong> (Java + MERN) who enjoys building fast, scalable, and visually appealing web applications with clean user interfaces and robust backend systems.
         </p>
       </div>
 
