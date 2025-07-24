@@ -26,7 +26,7 @@ function Projects() {
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
-        <h2>My Projects</h2>
+        <h2  style={{marginTop:"22px"}}>My Projects</h2>
         <div className="projects-grid">
           {projectData.map((project, index) => (
             <div className="project-card" key={index}>

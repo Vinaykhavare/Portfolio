@@ -2,7 +2,7 @@
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #fff;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@
   color: #c9d1d9;
   margin-bottom: 2rem;
   line-height: 1.6;
-  padding: 0 1rem;
+  padding: 0 0.1rem;
 }
 
 .resume-btn {
@@ -86,15 +86,15 @@
   }
 
   .home-image img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
   }
 }
 
 /* Small Screens (Mobiles) */
 @media (max-width: 480px) {
   .home {
-    padding: 1rem 0.5rem;
+    padding: 0 0.1rem;
   }
 
   .home-content {
@@ -115,8 +115,8 @@
   }
 
   .home-image img {
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
   }
 }
 
