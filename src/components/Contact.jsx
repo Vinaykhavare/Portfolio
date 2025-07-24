@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
@@ -6,25 +5,32 @@ import './Contact.css';
 function Contact() {
   const form = useRef();
   const [done, setDone] = useState(false);
+  const [isSending, setIsSending] = useState(false); // Track sending status
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (isSending) return; // Prevent resending if already in process
+
+    setIsSending(true);
 
     emailjs
       .sendForm(
         'service_jdjk8jh',   // Replace with your actual Service ID
         'template_quygcj2',  // Replace with your actual Template ID
         form.current,
-        'EBLXpPCeZLTVGVEA9'    // Replace with your actual Public Key
+        'EBLXpPCeZLTVGVEA9'  // Replace with your actual Public Key
       )
       .then(
         (result) => {
           console.log(result.text);
           setDone(true);
-          form.current.reset(); // Optional: Reset form after sending
+          form.current.reset();
+          setIsSending(false); // Reset sending state
         },
         (error) => {
           console.log(error.text);
+          setIsSending(false); // Reset sending state even if failed
         }
       );
   };
@@ -37,7 +43,9 @@ function Contact() {
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit" disabled={isSending}>
+            {isSending ? 'Sending...' : 'Send Message'}
+          </button>
           {done && <span className="success-text">Thanks! I will reply soon 😊</span>}
         </form>
       </div>
