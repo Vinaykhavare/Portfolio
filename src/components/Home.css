@@ -74,15 +74,18 @@
 @media (max-width: 768px) {
   .home h1 {
     font-size: 1.8rem;
+     margin-bottom: 7rem;
   }
 
   .home p {
     font-size: 1rem;
+     margin-bottom: 7rem;
   }
 
   .resume-btn {
     font-size: 0.95rem;
     padding: 0.7rem 1.4rem;
+     margin-bottom: 7rem;
   }
 
   .home-image img {
