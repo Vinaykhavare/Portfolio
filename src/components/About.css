@@ -120,7 +120,7 @@
 /* Tablets */
 @media (max-width: 992px) {
   .about-intro h2 {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
   }
 
   .about-intro p {
@@ -129,15 +129,25 @@
   }
 
   .about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 220px;
     padding: 1.3rem;
+    
+  }
+  p{
+    text-align: justify;
+  }
+  .project-info h3{
+    text-align: center;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .about {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .about-intro h2 {
@@ -147,6 +157,8 @@
   .about-cards {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .about-card {
